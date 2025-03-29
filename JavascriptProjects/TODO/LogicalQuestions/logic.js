@@ -87,3 +87,43 @@
 
 
 let arr = [2,5,3,7,54,4]
+
+// 2,4
+//output = [3,7]
+
+Array.prototype.newSlice = function (start=null, end=null){
+    let newArray = []
+
+    if(start>0 && end>0 ){
+    for (let i = start; i< end; i++){
+        newArray.push(this[i])     
+    }
+}
+if(start>0 && !end){
+    for(let i = start; i<this.length; i++){
+            newArray.push(this[i])
+    }
+}
+
+if(!start && !end){
+    console.log(start)
+            newArray = [...this]
+
+}
+ if(start<0 && !end){
+    let newStart = Math.abs(start) 
+
+    for(let i=(this.length-newStart); i<this.length; i++){
+        newArray.push(this[i])
+
+
+
+    }
+ }
+
+
+
+return newArray
+}
+
+console.log(arr.newSlice(-2))
