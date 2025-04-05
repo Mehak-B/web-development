@@ -86,44 +86,114 @@
 // console.log(arr)
 
 
-let arr = [2,5,3,7,54,4]
+// let arr = [2,5,3,7,54,4]
 
-// 2,4
-//output = [3,7]
+// // 2,4
+// //output = [3,7]
 
-Array.prototype.newSlice = function (start=null, end=null){
-    let newArray = []
+// Array.prototype.newSlice = function (start=null, end=null){
+//     let newArray = []
 
-    if(start>0 && end>0 ){
-    for (let i = start; i< end; i++){
-        newArray.push(this[i])     
+//     if(start>0 && end>0 ){
+//     for (let i = start; i< end; i++){
+//         newArray.push(this[i])     
+//     }
+// }
+// if(start>0 && !end){
+//     for(let i = start; i<this.length; i++){
+//             newArray.push(this[i])
+//     }
+// }
+
+// if(!start && !end){
+//     console.log(start)
+//             newArray = [...this]
+
+// }
+//  if(start<0 && !end){
+//     let newStart = Math.abs(start) 
+
+//     for(let i=(this.length-newStart); i<this.length; i++){
+//         newArray.push(this[i])
+
+
+
+//     }
+//  }
+
+
+
+// return newArray
+// }
+
+// console.log(arr.newSlice(-2))
+
+let arr =  [10,80,40,30,20,50]
+
+// targetSum = 50
+
+// function targetSum(item){
+// for(let i = 0; i<item.length;i++){
+//     for(let j = i+1;j<item.length;j++){
+//     if(item[i]+item[j] == 50){
+//         return {i,j}
+
+//     }
+//     }
+// }
+//     return null
+
+// }
+
+// console.log(targetSum(arr))
+
+// function targetSum(item, target){
+//     let obj = {}
+//     for(const num of item){
+//         let sec = target - num
+//         if(sec in obj){
+//             return {sec,num}
+        
+//         }else{
+//             obj[num] = 1
+            
+//         }
+//     }
+//     return []
+// }
+
+// console.log(targetSum(arr, 50))
+
+function sortArr(item){
+    let newArr = []
+    for(let i = 0; i<item.length; i++){
+        for(let j = i+1; j<item.length; j++){
+        if(item[i]>item[j]){
+            let temp = item[i];
+            item[i] = item[j];
+            item[j] = temp
+
+            // newArr.push(item[i])
+            // console.log(newArr)
+        }
+        }
     }
-}
-if(start>0 && !end){
-    for(let i = start; i<this.length; i++){
-            newArray.push(this[i])
-    }
+    return item
 }
 
-if(!start && !end){
-    console.log(start)
-            newArray = [...this]
+console.log(sortArr(arr))
 
+
+
+function swapNumbers(a,b){
+
+    // let c = a;
+    // a = b;
+    // b = c
+    [a,b] = [b,a]
+// 3,4
+
+
+    return [a,b]
 }
- if(start<0 && !end){
-    let newStart = Math.abs(start) 
-
-    for(let i=(this.length-newStart); i<this.length; i++){
-        newArray.push(this[i])
-
-
-
-    }
- }
-
-
-
-return newArray
-}
-
-console.log(arr.newSlice(-2))
+console.log(swapNumbers(3,4))
