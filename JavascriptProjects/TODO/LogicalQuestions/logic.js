@@ -128,7 +128,7 @@
 
 // console.log(arr.newSlice(-2))
 
-let arr =  [10,80,40,30,20,50]
+// let arr =  [10,80,40,30,20,50]
 
 // targetSum = 50
 
@@ -164,36 +164,71 @@ let arr =  [10,80,40,30,20,50]
 
 // console.log(targetSum(arr, 50))
 
-function sortArr(item){
-    let newArr = []
-    for(let i = 0; i<item.length; i++){
-        for(let j = i+1; j<item.length; j++){
-        if(item[i]>item[j]){
-            let temp = item[i];
-            item[i] = item[j];
-            item[j] = temp
+// function sortArr(item){
+//     let newArr = []
+//     for(let i = 0; i<item.length; i++){
+//         for(let j = i+1; j<item.length; j++){
+//         if(item[i]>item[j]){
+//             let temp = item[i];
+//             item[i] = item[j];
+//             item[j] = temp
 
-            // newArr.push(item[i])
-            // console.log(newArr)
-        }
-        }
-    }
-    return item
-}
+//             // newArr.push(item[i])
+//             // console.log(newArr)
+//         }
+//         }
+//     }
+//     return item
+// }
 
-console.log(sortArr(arr))
-
-
-
-function swapNumbers(a,b){
-
-    // let c = a;
-    // a = b;
-    // b = c
-    [a,b] = [b,a]
-// 3,4
+// console.log(sortArr(arr))
 
 
-    return [a,b]
-}
-console.log(swapNumbers(3,4))
+
+// function swapNumbers(a,b){
+
+//     // let c = a;
+//     // a = b;
+//     // b = c
+//     [a,b] = [b,a]
+// // 3,4
+
+
+//     return [a,b]
+// }
+// console.log(swapNumbers(3,4))
+
+const arr = [3,5,6,8,7,9,10,23, 5]
+const arr2 = [6,22,45,56,8,7,3]
+
+// function interSection(a1, a2){
+//     const newArr = []
+//         for(let i = 0; i< a2.length; i++){
+//             if(a1.includes(a2[i])){
+//                 newArr.push(a2[i])
+//             }
+//         }
+//     return newArr
+// }
+// console.log(interSection(arr,arr2))
+
+// const newObj = new Set(arr)
+// const newObj2 = new Set(arr2)
+
+// const interSection = [...newObj].filter(item => newObj2.has(item))
+
+// console.log(interSection)
+
+
+// console.log(newObj)
+
+const str = "mehakme"
+
+const newSet = new Set(str)
+
+
+// const newStr = [...newSet].toString().replaceAll(',', '')
+const newStr = [...newSet].join('')
+
+
+console.log(newStr)
