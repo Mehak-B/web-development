@@ -198,8 +198,8 @@
 // }
 // console.log(swapNumbers(3,4))
 
-const arr = [3,5,6,8,7,9,10,23, 5]
-const arr2 = [6,22,45,56,8,7,3]
+// const arr = [3,5,6,8,7,9,10,23, 5]
+// const arr2 = [6,22,45,56,8,7,3]
 
 // function interSection(a1, a2){
 //     const newArr = []
@@ -222,13 +222,64 @@ const arr2 = [6,22,45,56,8,7,3]
 
 // console.log(newObj)
 
-const str = "mehakme"
+// const str = "mehakme"
 
-const newSet = new Set(str)
-
-
-// const newStr = [...newSet].toString().replaceAll(',', '')
-const newStr = [...newSet].join('')
+// const newSet = new Set(str)
 
 
-console.log(newStr)
+// // const newStr = [...newSet].toString().replaceAll(',', '')
+// const newStr = [...newSet].join('')
+
+
+// console.log(newStr)
+
+
+// let str = "emehakmeh"
+
+// function repStr(item){
+// let  nonrep = ""
+//     const obj= {}
+//     for(let i = 0; i<item.length; i++){
+//         if(obj[item[i]]){
+//             obj[item[i]] += 1 
+//         }else{
+//             obj[item[i]] = 1
+//         }
+//     }
+//      for(const char of item ){
+//         // console.log(obj[char])
+//         if(obj[char] == 1){
+//         //    nonrep  = char
+//         return char
+//         //    console.log(nonrep)
+//         // break;
+//         }
+//      }
+// }
+
+// console.log(repStr(str))
+
+// flat array
+// let arr = [1,3,[2,4,7],3,2,[6,4,[3,5,[2,4,6,6]],4,3,6,2]]
+
+
+// Array.prototype.flatArr = function(){
+//     let flattenedArray = []
+//     for(let i = 0; i<this.length; i++){
+//         if(Array.isArray(this[i])){
+//             flattenedArray.push(...this[i].flatArr())
+//             // console.log(i,"happen",...this[i].flatArr())
+//         //    console.log( this[i].flatArr())
+//         // this[i].flatArr()
+//         this[i].flatArr()
+
+
+//         }else{
+//             flattenedArray.push(this[i])
+//         }
+//     }
+//     return flattenedArray
+// }
+
+// console.log(arr.flatArr())
+
