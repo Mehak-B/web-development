@@ -283,3 +283,23 @@
 
 // console.log(arr.flatArr())
 
+//array.reduce() -> polyfill
+
+Array.prototype.myreduce = function(func, initialVal= null){
+    let accum = initialVal
+    for(let i = 0; i<this.length; i++){
+    accum = func(accum,this[i],i,this) 
+    }
+
+    return accum
+}
+
+let arr = [2,5,4,3,6]
+
+let res = arr.myreduce((acc,prev) =>{
+   return  acc+prev
+
+})
+console.log(res)
+
+
