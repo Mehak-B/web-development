@@ -21,3 +21,19 @@ function toDOList(item){
     });
     }   
 }
+
+function addAttribute(){
+    const clickDiv = document.getElementsByClassName('section')
+    console.log(clickDiv)
+    for(let i=0; i<=clickDiv.length; i++){
+    if (clickDiv[i].getAttribute('onclick')) {
+        console.log('true')
+         clickDiv[i].setAttribute('mehak',"")
+    }else{
+        console.log("false")
+    }
+}
+
+}
+
+console.log(addAttribute())

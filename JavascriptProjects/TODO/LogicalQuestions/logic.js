@@ -285,21 +285,79 @@
 
 //array.reduce() -> polyfill
 
-Array.prototype.myreduce = function(func, initialVal= null){
-    let accum = initialVal
-    for(let i = 0; i<this.length; i++){
-    accum = func(accum,this[i],i,this) 
-    }
+// Array.prototype.myreduce = function(func, initialVal= null){
+//     let accum = initialVal
+//     for(let i = 0; i<this.length; i++){
+//     accum = func(accum,this[i],i,this) 
+//     }
 
-    return accum
+//     return accum
+// }
+
+// let arr = [2,5,4,3,6]
+
+// let res = arr.myreduce((acc,prev) =>{
+//    return  acc+prev
+
+// })
+// console.log(res)
+
+
+// current date - YYYY-MM-DD
+// function getDate(){
+//     let myDate = new Date()
+//     myDate.toJSON()
+//     console.log(myDate.toJSON())
+//     const [year, month, date] = [
+//         myDate.getFullYear(),
+//         myDate.getMonth()+1,
+//         myDate.getDate()
+//       ];
+//       const newDate = [year, month, date].join('-')
+//       console.log([year,month,date])
+//       console.log(newDate)
+// }
+
+// console.log(getDate())
+
+// remove duplicate object which has same id
+
+// function getUniqueIdArr(item){
+//     let newArr = []
+
+
+//     for (let i = 0; i < item.length; i++) {
+//         let index = newArr.findIndex(el => el.id === item[i].id);
+//         if (index === -1) {
+//             newArr.push(item[i]);
+//         }
+//     }
+// return newArr
+// }
+
+// console.log(getUniqueIdArr(arr))
+
+// string compression aaabcccdda- a3b1c3d2a1
+
+let str = "aaabcccdda"
+
+function strCompression(item){
+ let newStr = ""
+  let count = 1
+  for(let i = 0; i<item.length; i++){
+    if(item[i] == item[i+1]){
+      count = count + 1 
+      console.log(count)
+    }else {
+      newStr += item[i]+ count
+      count = 1
+          }
 }
 
-let arr = [2,5,4,3,6]
+return newStr
+}
 
-let res = arr.myreduce((acc,prev) =>{
-   return  acc+prev
+console.log(strCompression(str))
 
-})
-console.log(res)
 
 
