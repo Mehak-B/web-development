@@ -339,25 +339,52 @@
 
 // string compression aaabcccdda- a3b1c3d2a1
 
-let str = "aaabcccdda"
+// let str = "aaabcccdda"
 
-function strCompression(item){
- let newStr = ""
-  let count = 1
-  for(let i = 0; i<item.length; i++){
-    if(item[i] == item[i+1]){
-      count = count + 1 
-      console.log(count)
-    }else {
-      newStr += item[i]+ count
-      count = 1
-          }
+// function strCompression(item){
+//  let newStr = ""
+//   let count = 1
+//   for(let i = 0; i<item.length; i++){
+//     if(item[i] == item[i+1]){
+//       count = count + 1 
+//       console.log(count)
+//     }else {
+//       newStr += item[i]+ count
+//       count = 1
+//           }
+// }
+
+// return newStr
+// }
+
+// console.log(strCompression(str))
+
+
+// fibonacci series
+// 0 1 1 2 3 5 8 13 21
+
+function returnFibonacci(n){
+  if(!n) return []
+  const  initialVal = 0;
+  const nextVal = 1;
+  const list = []
+ 
+  if(n == 1){
+  list.push(initialVal)
+  return list
+  }
+
+  list.push(initialVal)
+  list.push(nextVal)
+
+  for(let i = 0; i<n-2; i++){
+   const listNew = list[i] + list[i+1]
+   list.push(listNew)
+  }
+
+return list
 }
 
-return newStr
-}
-
-console.log(strCompression(str))
-
+console.log(returnFibonacci(8))
 
 
