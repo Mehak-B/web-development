@@ -26,3 +26,17 @@ import { BehaviorSubject } from 'rxjs';
 
 // loginState.next(true);
 
+// import { Subject } from 'rxjs';
+// import { map } from 'rxjs';
+
+const behavior = new BehaviorSubject<number>(100);
+
+behavior.subscribe(val => console.log('A:', val));
+
+behavior.next(200);
+
+behavior.subscribe(val => console.log('B:', val));
+
+behavior.next(300);
+
+

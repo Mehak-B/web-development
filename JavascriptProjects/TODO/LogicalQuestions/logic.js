@@ -363,28 +363,150 @@
 // fibonacci series
 // 0 1 1 2 3 5 8 13 21
 
-function returnFibonacci(n){
-  if(!n) return []
-  const  initialVal = 0;
-  const nextVal = 1;
-  const list = []
+// function returnFibonacci(n){
+//   if(!n) return []
+//   const  initialVal = 0;
+//   const nextVal = 1;
+//   const list = []
  
-  if(n == 1){
-  list.push(initialVal)
-  return list
-  }
+//   if(n == 1){
+//   list.push(initialVal)
+//   return list
+//   }
 
-  list.push(initialVal)
-  list.push(nextVal)
+//   list.push(initialVal)
+//   list.push(nextVal)
 
-  for(let i = 0; i<n-2; i++){
-   const listNew = list[i] + list[i+1]
-   list.push(listNew)
-  }
+//   for(let i = 0; i<n-2; i++){
+//    const listNew = list[i] + list[i+1]
+//    list.push(listNew)
+//   }
 
-return list
-}
+// return list
+// }
 
-console.log(returnFibonacci(8))
+// console.log(returnFibonacci(8))
 
+// pattern1
+// * 
+// * * 
+// * * * 
+// * * * * 
+// * * * * *
+
+
+// function starPattern(n){
+//   let pattern = ''
+// for (let i = 1 ; i<=n; i++){
+//   for(let j = 1; j<= i; j++){
+//   pattern += '* ' 
+//   }
+//   pattern += '\n'
+// }
+// return pattern
+// }
+
+// console.log(starPattern(5))
+
+// let star = ""
+
+// for (let i = 5; i>=0; i--){
+//     for(let j = 1; j <= i; j++){
+//     star = star + ' *'
+//     }
+//     star = star + '\n'
+    
+// }
+
+// console.log(star)
+
+// let arr = [10,4,5,6,2,5,6,5,5,5,5,5,5,5,5,5,,2,2,2]
+
+// function returnMaxRepNum(item){
+//   let obj = {}
+//   for(let i = 0; i<item.length; i++){
+//     if(obj[item[i]]){
+//       obj[item[i]] += 1
+//     }else{
+//       obj[item[i]] = 1
+//     }
+//   }
+
+//   let max = 0
+//   let value;
+//   for(let key in obj){
+//     console.log(key)
+//     if(obj[key]>max){
+//       console.log("obj[key",obj[key])
+//       max = obj[key]
+//       value = key
+
+//       console.log("max",max)
+//     }
+//   }
+//   return {key:value, val:max}
+// }
+
+// console.log(returnMaxRepNum(arr))
+
+// There are two arrays with individual values.
+//  Write a JavaScript program to compute the sum of each individual index value in the given array.
+
+// Sample array :
+
+// array1 = [1,0,2,3,4,5,6,7,8];
+// array2 = [3,5,6,7,8,13];
+
+// // Expected Output :
+// // [4, 5, 8, 10, 12, 13]
+
+// function getIndSum(item1, item2){
+//   // let sum =0;
+//   let newArr = []
+//   let longestArr 
+//   let smallestArr
+//   if(item1.length > item2.length){
+//       longestArr = item1
+//       smallestArr = item2
+//   }else{
+//     longestArr = item2
+//     smallestArr = item1
+
+//   }
+//   for(let i = 0; i<longestArr.length; i++){
+//     if(smallestArr[i]){
+//         newArr[i] =  longestArr[i] + smallestArr[i]
+        
+//       }else{
+//         newArr[i] = longestArr[i]
+//       }
+//   }
+  
+// return newArr
+// }
+
+// console.log(getIndSum(array1, array2))
+
+// const str1 = "setak"
+// const str2 = "silent"
+// const str3 = "listen"
+// const str4 = "throw hema"
+// const str5 = "meha worth"
+// const str6 = "erty"
+
+// function findAnagram(item1, item2){
+//  const input1 = item1.split('')
+//  const input2 = item2.split('')
+//  for (let char of item1){
+//     if(!item2.includes(char)){
+//         return false
+//     }
+// }
+// return true
+
+// }
+// console.log(findAnagram(str2, str3))
+// console.log(findAnagram(str1, str2))
+// console.log(findAnagram(str4, str5))
+// console.log(findAnagram(str4, str6))
 
