@@ -510,3 +510,178 @@
 // console.log(findAnagram(str4, str5))
 // console.log(findAnagram(str4, str6))
 
+// let promise1 = new Promise((resolve,reject)=>{
+//     setTimeout(() =>{
+//         reject('resolvethis')
+//     },2000)
+// })
+
+// let promise2 = new Promise((resolve, reject) =>{
+//     setTimeout(() =>{
+//         reject('resolvehtdfis')
+//     },3000)
+// })
+
+// let promise3 = new Promise((resolve, reject) =>{
+//     setTimeout(() => {
+//         resolve('reject')
+//     },1000)
+// })
+
+// Promise.myAllPromise = function(list){
+//     if (list.length === 0 ) return Promise.resolve([]);
+//     const result = []
+//     let resolvedPromise = 0;
+    
+//     return new Promise((resolve, reject) => {
+//         for(let i = 0; i<list.length; i++){
+//             list[i].then((el) => {
+//                 result[i] = el
+//                 resolvedPromise++;
+//                 if(resolvedPromise == list.length){
+//                     resolve(result)
+
+//                 }
+//             })
+//             .catch(err =>{
+//                 console.log(err)
+//                 reject(err)
+//             })
+//         }
+//     })
+// }
+
+// const promises = [promise1, promise2, promise3];
+// Promise.myAllPromise(promises).then((result) => console.log(result))
+// .catch((err) => console.log(err));
+
+// Promise.myAllSettled = function (list){
+//     let result = []
+//     let countPromise = 0
+
+//     return new Promise((resolve, reject) =>{
+
+//         for(let i=0; i<list.length; i++){
+//             list[i].then((el) =>{
+//                 result[i] = el
+//                 countPromise++;
+//                 if(countPromise == list.length){
+//                     resolve(result)
+
+//                 }
+//             })
+//             .catch(err => {
+//                  result[i] = err      
+//                  countPromise++        
+//                  if(countPromise == list.length){
+//                       resolve(result)
+//                  } 
+//             })
+//         }
+
+//     })
+    
+
+
+// }
+// Promise.allSettled(promises).then((result) => console.log(result))
+// Promise.myAllSettled(promises).then((result)=> console.log(result))
+
+// Promise.myAny = function(list){
+//     let resultErrors = "AggregateError: All promises were rejected"
+//         if (list.length === 0 ) return Promise.reject(resultErrors);
+
+//   let countRejectedPormise = 0
+//    let  output;
+
+//    return new Promise ((resolve, reject) =>{
+//     for(let i = 0; i<list.length; i++){
+//         list[i].then((el) =>{
+//             // console.log(el)
+//             output = el
+//             resolve(output)
+//         })
+//         .catch(err =>{
+//             // console.log(err)
+//             // resultErrors[i] = err
+//             countRejectedPormise++
+//             if(countRejectedPormise == list.length) reject(resultErrors)
+//         })
+//     }
+// })
+// }
+// Promise.any([]).then((result)=> console.log(result)).catch((reject)=> console.log(reject))
+// Promise.myAny(promises).then((result)=> console.log(result)).catch((reject)=> console.log(reject))
+
+// Promise.myRace = function(list){
+//      if (list.length === 0) return new Promise(() => {});
+
+//     // let output;
+//     return new Promise((resolve,reject) =>{
+//         for(let i = 0; i< list.length; i++){
+//             list[i].then(el =>{
+//                 // output = el
+//                 resolve(el)
+//             }).catch(err =>{
+//                 // output = err
+//                 reject(err)
+//             })
+//         }
+//     })
+// }
+
+// Promise.race([]).then(res => console.log(res)).catch((err) => console.log(err))
+// Promise.myRace([]).then(res => console.log(res)).catch((err) => console.log(err))
+
+// count binary
+
+// const val = 52
+// // [110100]
+
+// // 10 - 10/2 - 5 - 0
+// //       5/2 - 2 - 1
+// //       2/2 - 1 - 0
+// function getBinary(num){
+// //  convert into binary
+// let rem = num % 2
+// // let quo = ''
+// let binary = rem
+// let result = ''
+//  let quo =  Math.floor(num/2)
+//      while(quo > 1){
+//     quo =  Math.floor(num/2)
+//     num = quo
+//        rem = quo % 2
+//        console.log(quo)
+//        console.log(binary)
+//        binary += rem.toString()
+
+// }
+// for(let i = binary.length-1; i>=0; i-- ){
+// result += binary[i]
+// }
+//     return result
+// }
+// // console.log(getBinary(val))
+
+// function countZero(digit){
+//   let newDigit =  getBinary(digit)
+//   let count = 0
+//   let arr = []
+
+//   for (let i = 0;i<newDigit.length; i++){
+//     console.log(newDigit[i])
+//     if(newDigit[i] == 0){
+//         count++
+//         arr.push(i)
+//     }   
+// }
+// arr.unshift(count)
+// return arr
+
+// }
+// console.log(countZero(val))
+
+
+
+
